@@ -1,0 +1,15 @@
+{
+  "name": "ll_merge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ll_merge.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ed Puzino",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^5.8.0",
+    "jest": "^23.6.0"
+  }
+}
