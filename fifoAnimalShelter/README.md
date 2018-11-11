@@ -1,5 +1,5 @@
 # First-in, First out Animal Shelter.
-Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
+* Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
 
 ## Challenge
 * Implement the following methods:
