@@ -12,3 +12,4 @@
 
 ## Solution
 ![](../assets/fifo_animal_shelter.jpg)
+

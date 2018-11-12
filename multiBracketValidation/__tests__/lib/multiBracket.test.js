@@ -21,3 +21,4 @@ describe('multi-bracket-validation.js', () => {
     expect(newTest).toBeFalsy;
   })
 });
+

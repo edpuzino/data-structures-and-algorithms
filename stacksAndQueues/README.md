@@ -46,3 +46,4 @@ While some of the other students decided to call upon the LinkedList built previ
 
 ## Solution
 ![](../assets/queue_with_stacks.jpg)
+
