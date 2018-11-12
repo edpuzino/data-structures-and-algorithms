@@ -15,3 +15,4 @@ I decided to first take the string and turn it into an array of each individual 
 ![](../assets/multi_bracket_validation.jpg)
 ![](../assets/multi_bracket_validation1.jpg)
 ![](../assets/multi_bracket_validation2.jpg)
+
