@@ -43,3 +43,6 @@ While some of the other students decided to call upon the LinkedList built previ
 
 ### Peek
 * Returns the node at the front of the queue.
+
+## Solution
+![](../assets/queue_with_stacks.jpg)
