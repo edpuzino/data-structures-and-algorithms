@@ -1,11 +1,17 @@
 # Trees
-<!-- Short summary or background information -->
+
+Buiding Binary Trees and Binary Search Trees
 
 ## Challenge
-<!-- Description of the challenge -->
+
+Traverse through the Binary Trees using the preOrder, inOrder, and postOrder methods.  Add and search through Binary Search Trees.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+PreOrder, inOrder, and postOrder methods use regular traversal methods.  Add and Search cut the binary searcg tree in half with each step resulting in a big O of O(logN)
 
 ## API
-<!-- Description of each method publicly available in each of your trees -->
+
+* The preOrder method starts at the root then goes left then right.
+* The inOrder method starts at the left side then the root and then the right side.
+* The postOrder method starts at the left, then the right and the root last.
