@@ -2,40 +2,10 @@
 
 const Node = require('./node.js');
 
-/*
+
 class BinaryTree {
   constructor(root = null) {
     this.root = root;
-  }
-
-  add(value) {
-    const node = this.root;
-    if(node === null) {
-      this.root = new Node(value);
-      return;
-    }
-
-    const _insert = node => {
-      let nodeQueue = [];
-
-      nodeQueue.push(this.root);
-
-      while(nodeQueue.length) {
-        let current = nodeQueue.shift();
-        if(current.left) {
-          nodeQueue.push(current.left);
-        } else {
-          current.left = new Node(value);
-          return;
-        }
-        if(current.right) {
-          nodeQueue.push(current.right);
-        } else {
-          current.right = new Node(value);
-          return;
-        }        
-      }      
-    }
   }
   
   preOrder() {
@@ -109,7 +79,8 @@ class BinaryTree {
     return results;
   }
 }
-*/
+
+
 class BinarySearchTree {
   constructor(root = null) {
     this.root = root;
@@ -232,23 +203,24 @@ class BinarySearchTree {
 }
 
 module.exports = BinarySearchTree;
+/*
+let tree = new BinarySearchTree();
+let values = [9,4,17,3,6,22,5,7,20];
+values.map(value => tree.add(value));
 
-//let tree = new BinarySearchTree();
-//let values = [9,4,17,3,6,22,5,7,20];
-//values.map(value => tree.add(value));
-
-//console.log(tree.preOrder());
-//console.log(tree.postOrder());
-//console.log(tree.inOrder());
-//console.log(tree.levelOrder());
-//console.log(tree.search(17));
+console.log(tree.preOrder());
+console.log(tree.postOrder());
+console.log(tree.inOrder());
+console.log(tree.levelOrder());
+console.log(tree.search(17));
 
 
-////let pine = new BinaryTree();
-//let pineValues = [1,2,3,4,5,6,7,8,9]
-//pineValues.map(value => pine.add(value));
+let pine = new BinaryTree();
+let pineValues = [1,2,3,4,5,6,7,8,9];
+pineValues.map(value => pine.add(value));
 
-//console.log(pine.preOrder());
-//console.log(pine.postOrder());
-//console.log(pine.inOrder());
-//console.log(pine.levelOrder());
+console.log(pine.preOrder());
+console.log(pine.postOrder());
+console.log(pine.inOrder());
+console.log(pine.levelOrder());
+*/

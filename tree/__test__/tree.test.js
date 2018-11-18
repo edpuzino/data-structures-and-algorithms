@@ -1,6 +1,6 @@
 'use strict';
 
-const tree = require('../tree.js');
+const BinarySearchTree = require('../tree.js');
 
 describe('tree.js', () => {
 
@@ -18,16 +18,25 @@ describe('tree.js', () => {
   });
 
   it('test for postOrder', () => {
+    let tree = new BinarySearchTree();
+    let values = [9,4,17,3,6,22,5,7,20];
+    values.map(value => tree.add(value));
     let newArray = tree.postOrder();
     expect(newArray).toEqual(b);
   });
 
   it('test for inOrder', () => {
+    let tree = new BinarySearchTree();
+    let values = [9,4,17,3,6,22,5,7,20];
+    values.map(value => tree.add(value));
     let newArray = tree.inOrder();
     expect(newArray).toEqual(c);
   });
 
   it('test for breath', () => {
+    let tree = new BinarySearchTree();
+    let values = [9,4,17,3,6,22,5,7,20];
+    values.map(value => tree.add(value));
     let newArray = tree.levelOrder();
     expect(newArray).toEqual(d);
   });
