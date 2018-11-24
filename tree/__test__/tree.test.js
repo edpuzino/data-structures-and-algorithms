@@ -11,7 +11,7 @@ describe('tree.js', () => {
 
   it('test for preOrder', () => {
     let tree = new BinarySearchTree();
-    let values = [9,4,17,3,6,22,5,7,20];
+    let values = d;
     values.map(value => tree.add(value));
     let newArray = tree.preOrder();
     expect(newArray).toEqual(a);
@@ -19,7 +19,7 @@ describe('tree.js', () => {
 
   it('test for postOrder', () => {
     let tree = new BinarySearchTree();
-    let values = [9,4,17,3,6,22,5,7,20];
+    let values = d;
     values.map(value => tree.add(value));
     let newArray = tree.postOrder();
     expect(newArray).toEqual(b);
@@ -27,7 +27,7 @@ describe('tree.js', () => {
 
   it('test for inOrder', () => {
     let tree = new BinarySearchTree();
-    let values = [9,4,17,3,6,22,5,7,20];
+    let values = d;
     values.map(value => tree.add(value));
     let newArray = tree.inOrder();
     expect(newArray).toEqual(c);
@@ -35,9 +35,17 @@ describe('tree.js', () => {
 
   it('test for breath', () => {
     let tree = new BinarySearchTree();
-    let values = [9,4,17,3,6,22,5,7,20];
+    let values = d;
     values.map(value => tree.add(value));
     let newArray = tree.levelOrder();
     expect(newArray).toEqual(d);
+  });
+
+  it('test for maximum value', () => {
+    let tree = new BinarySearchTree();
+    let values = d;
+    values.map(value => tree.add(value));
+    let maxValue = tree.findMaximumValue();
+    expect(maxValue).toEqual(22);    
   });
 });
