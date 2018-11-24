@@ -8,6 +8,8 @@ describe('tree.js', () => {
   let b = [ 3, 5, 7, 6, 4, 20, 22, 17, 9 ];
   let c = [ 3, 4, 5, 6, 7, 9, 17, 20, 22 ];
   let d = [ 9, 4, 17, 3, 6, 22, 5, 7, 20 ];
+  let e = [ 9, 4, 17, 3, 6, 22, 5, 7, 20, 15 ];
+  let f = [ 9, 4, 17, 3, 6, 15, 22, 5, 7, 20 ];
 
   it('test for preOrder', () => {
     let tree = new BinarySearchTree();
@@ -33,12 +35,12 @@ describe('tree.js', () => {
     expect(newArray).toEqual(c);
   });
 
-  it('test for breath', () => {
+  it('test for breath first', () => {
     let tree = new BinarySearchTree();
-    let values = d;
+    let values = e;
     values.map(value => tree.add(value));
-    let newArray = tree.levelOrder();
-    expect(newArray).toEqual(d);
+    let newArray = tree.breadthFirst();
+    expect(newArray).toEqual(f);
   });
 
   it('test for maximum value', () => {
