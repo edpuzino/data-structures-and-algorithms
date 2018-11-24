@@ -199,7 +199,7 @@ class BinarySearchTree {
   }
 
   // Breath First
-  levelOrder() {
+  breadthFirst() {
     let results = [];
     let nodeQueue = [];
 
