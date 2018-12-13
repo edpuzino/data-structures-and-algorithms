@@ -1,11 +1,7 @@
 'use strict';
 
-//let string1 = "Happy birthday to you, happy birthday to you, happy birthday dear so and so, happy birthday to you";
-//let string2 = "We the people, in order to form a more perfect union, establish justivce, ensure demestic tranquility.";
-//let string3 = '';
 
 let repeatedWord = (string) => {
-  //stringNew = string.replace(/[,./?><;:)(*&^%$#@!~-_]/g,'');
   string = string.toLowerCase();
   let arr = string.split(' ');
   console.log(arr);
@@ -27,6 +23,4 @@ let repeatedWord = (string) => {
 
 module.exports = repeatedWord;
 
-//repeatedWord(string1);
-//repeatedWord(string2);
-//repeatedWord(string3);
+
