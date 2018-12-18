@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "lint": "eslint **/*.js",
-    "test": "jest --verbose",
-    "test-watch": "jest --verbose --watchAll"
+    "test": "jest --coverage --verbose",
+    "test-watch": "jest --coverage --verbose --watchAll"
   },
   "author": "Ed Puzino",
   "license": "MIT",

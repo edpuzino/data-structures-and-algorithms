@@ -2,12 +2,6 @@
 
 const Node = require('./node.js');
 
-let treeOne = [ 9, 4, 3, 6, 5, 7, 17, 22, 20 ];
-let treeTwo = [ 41, 12, 53, 87, 91, 5, 3, 2, 72 ];
-let treeThree = [ 41, 18, 2, 35, 51, 14, 8, 63, 0 ];
-let treeFour = [];
-let commonValues = [ 3, 5 ];
-
 class BinarySearchTree {
   constructor(root = null) {
     this.root = root;
@@ -42,8 +36,11 @@ class BinarySearchTree {
     _insert(node);
   }
 
-  treeIntersection(node, nodeTwo) {
+  tree_intersection(node, nodeTwo) {
     let results = [];
+    if(!node.root || !nodeTwo.root) {
+      return 'Empty Node';
+    }
   
     let _walk = node => {
   
@@ -68,83 +65,9 @@ class BinarySearchTree {
       _jump(nodeTwo.root);
     };
     _walk(node.root);
-    console.log(results);
     return results;
   }
-/*
-  treeIntersection(treeOne, treeTwo) {
-    let results = [];
-
-    _walk => {
-      if(treeOne.left) {
-        _walk(treeOne.left);
-        _jump => {
-          if(treeTwo.left) {
-            _jump(treeTwo.left);
-              if(treeOne.value === treeTwo.value) {
-                results.push(treeOne.value);
-              }
-          }
-          if(treeTwo.right) {
-            _jump(treeTwo.right);
-            if(treeOne.value === treeTwo.value) {
-              results.push(treeOne.value);
-            }
-          }
-        }
-        _jump(treeTwo.root);
-      }
-      if(treeOne.right) {
-        _walk(treeOne.right);
-        _jump => {
-          if(treeTwo.left) {
-            _jump(treeTwo.left);
-              if(treeOne.value === treeTwo.value) {
-                results.push(treeOne.value);
-              }
-          }
-          if(treeTwo.right) {
-            _jump(treeTwo.right);
-            if(treeOne.value === treeTwo.value) {
-              results.push(treeOne.value);
-            }
-          }
-        }
-        _jump(treeTwo.root)
-      }
-      _walk(treeOne.root);
-    };
-    console.log(results);
-    return results;
-  }*/
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-let tree = new BinarySearchTree();
-treeOne.map(value => tree.add(value));
-let treeOneTree = tree;
-console.log(treeOneTree);
-
-tree = new BinarySearchTree();
-treeTwo.map(value => tree.add(value));
-let treeTwoTree = tree;
-console.log(treeTwoTree);
-
-tree = new BinarySearchTree();
-tree.treeIntersection(treeOneTree, treeTwoTree);
-
 
 
 module.exports = BinarySearchTree;
