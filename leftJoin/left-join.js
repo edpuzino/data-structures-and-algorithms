@@ -1,23 +1,23 @@
-'use strict'
+'use strict';
 
-let myMap1 = [{ word: 'big', synonym: 'huge'},{word: 'bright', synonym: 'shiny' },{word: 'happy', synonym: 'merry'},{word: 'lucky', synonym: 'fortuitous'}];
-let myMap2 = [{word: 'happy', antonym: 'sad'},{word: 'bright', antonym: 'dim'},{word: 'big', antonym: 'little'},{word: 'smart', antonym: 'slow'}]
+let leftJoin = module.exports = {};
 
+leftJoin.leftjoins = (myMap1, myMap2) => {
+  let returnObj = {};
+  let keyArr = Array.from(myMap1.keys());
+  let keyArr2 = Array.from(myMap2.keys());
+  console.log(keyArr);
+  console.log(keyArr2);
 
-let returnObj = {};
-let keyArr = Array.from(myMap1);
-console.log(keyArr);
-
-function leftJoin(A, B) {
+  if((keyArr.length === 0) || (keyArr2.length === 0)) {
+    return 'Empty hashmap';
+  }
   for(let i = 0; i < keyArr.length; i ++) {
     let newKey = keyArr[i];
-    let leftVal = A[newKey];
-    let rightVal = B[newKey];
+    let leftVal = myMap1.get(newKey);
+    let rightVal = myMap2.get(newKey);
     returnObj[newKey] = [leftVal, rightVal];
   }
   console.log(returnObj);
   return returnObj;
-}
-
-leftJoin(myMap1, myMap2);
-
+};
