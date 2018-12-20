@@ -12,7 +12,7 @@
  * Avoid utilizing any of the library methods available to your language.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+ * Had to research Hashmaps, Array.from, and get in order to complete this challenge. I believ the Big O for space is O(1) and time is O(n).
 
 ## Solution
 ![](../assets/left_join.jpg)
