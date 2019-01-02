@@ -1,6 +1,6 @@
 'use strict';
 
-const util = require('util');
+//const util = require('util');
 const LinkedList = require('./ll.js');
 
 
@@ -32,72 +32,40 @@ class Hashmap {
 
   // Takes in the key and returns the value from key/value pair.
   find(key) {
-    
     let hash = this.hash(key);
-    let target = this.map[hash];
-    
-    for(let i = 0; i < target.length; i ++) {
-
-
-
-      
+    let currentNode = this.map[hash].head;
+    while(currentNode.next) {
+      if(currentNode.value.name === key) {
+        return currentNode.value.role;
+      }
+      currentNode = currentNode.next;
     }
-    
+    if(currentNode.value.name === key) {
+      return currentNode.value.role;
+    }
+    return 'This key is not in the Hash table';   
   }
 
   // Takes in the key and returns if the key exists in the table already
   contains(key) {
     let hash = this.hash(key);
     let target = this.map[hash];
-
-    if(!target) {
-
-
-
-      return false;
-    } else {
+    if(target) {
       return true;
+    } else {
+      return false;
     }
+
   }
 
   // Takes in a key and returns the index in the array the key is stored
   getHash(key) {
     let hash = this.hash(key);
-    if(hash) {
-      return hash;
-    }
+    return hash;
   }
 
 }
 
 
 
-let myhash = new Hashmap(14);
-myhash.add('John','Boss');
-myhash.add('Cathy','The Real Boss');
-myhash.add('Zach','Kid 1');
-myhash.add('Allie','Kid 2');
-myhash.add('Rosie','Dog');
-myhash.add('Cat','TA');
-myhash.add('Justin','Student');
-myhash.add('Jason','Student');
-myhash.add('Ben','Student');
-myhash.add('Timea','Student');
-myhash.add('Jen','Student');
-myhash.add('Khalil','Student');
-myhash.add('Michael','Student');
-myhash.add('Ovi','Student');
-
-console.log(util.inspect(myhash,{showHidden:false,depth:null}));
-
-let find = myhash.find('Timea');
-console.log(find);
-
-let contains = myhash.contains('Jason');
-console.log(contains);
-
-let contains2 = myhash.contains('Edward');
-console.log(contains2);
-
-let get = myhash.getHash('Rosie');
-console.log(get);
+module.exports = Hashmap;
